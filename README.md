@@ -158,42 +158,14 @@ export default App;
 </html>
 ```
 
-### Laravel Blade Integration
-```blade
-@extends('index')
-
-@section('acr_index')
-<div class="page-section border-bottom-2">
-    <div class="container page__container">
-        <div id="app-acr-support-api-vue"></div>
-    </div>
-</div>
-@endsection
-
-@section('header')
-<link rel="stylesheet" href="https://ai-support.webuldum.com/css/api_web.css?v=1.2">
-<link rel="stylesheet" href="https://ai-support.webuldum.com/tabler-icons-3.29.0/webfont/tabler-icons.min.css">
-@endsection
-
-@section('footer')
-<script>
-    window.userData = {
-        api_url: "https://ai-support.webuldum.com/api",
-        api_key: "751bf2eeacc17e27657c38f8fd24dbf4",
-        user_id: {{ auth()->check() ? auth()->user()->id : rand(10000000, 90000000) }},
-        user_tel: "{{ auth()->check() ? auth()->user()->tel : null }}",
-        user_name: "{{ auth()->check() ? auth()->user()->name : 'Guest User' }}",
-        admin: {{ in_array(1, roleIds()) ? 1 : -1 }}
-    };
-</script>
-<script src="https://ai-support.webuldum.com/js/destek.js?v=1.2"></script>
-@endsection
-```
-
 ## Pricing Model
 - **No Free Trial:** The system does not offer a free trial.
 - **Credit-Based System:** Users must purchase AI tokens in advance.
 - **No Corporate Discounts:** There are currently no bulk or special pricing plans.
+
+## Useful Links
+- **[Demo Page](https://ai-support.webuldum.com/tr/app/destekapi/demo#/)**
+- **[Pricing Page](https://ai-support.webuldum.com/tr/app/destekapi/fiyatlandirma)**
 
 For further details, visit [AI Support System](https://ai-support.webuldum.com).
 
